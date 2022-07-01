@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racerooo</title>
+    <script src="./game.ts" type="module"></script>
+    <link rel="stylesheet" href="src/Styles/style.scss">
+</head>
+<body>
+    <header>
+        <h1>Race-Game</h1>
+    </header>
+    <div id="canvas_area"></div>
+    <div id="controls" style="text-align: center;">
+        <div class="btn-grid">
+            <a onclick="setMomentumChange(-1,-1)">&#8598;</a>
+            <a onclick="setMomentumChange(0,-1)">&#8593;</a>
+            <a onclick="setMomentumChange(1,-1)">&#8599;</a>
+            <a onclick="setMomentumChange(-1,0)">&#8592;</a>
+            <a onclick="setMomentumChange(0,-0)">O</a>
+            <a onclick="setMomentumChange(1,0)">&#8594;</a>
+            <a onclick="setMomentumChange(-1,1)">&#8601;</a>
+            <a onclick="setMomentumChange(0,1)">&#8595;</a>
+            <a onclick="setMomentumChange(1,1)">&#8600;</a>
+        </div>
+        <a onclick="endTurn()">End Turn</a>
+    </div>
+    <script>
+        function setMomentumChange(x,y) {
+            const event = new Event("Game-Event");
+            event.Name = "movement";
+            event.Data = {X: x, Y: y};
+            document.dispatchEvent(event);
+        }
+
+        function endTurn(){
+            const event = new Event("Game-Event");
+            event.Name = "end-turn";
+            document.dispatchEvent(event);
+        }
+    </script>
+</body>
+</html>

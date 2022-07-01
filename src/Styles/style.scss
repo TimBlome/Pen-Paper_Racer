@@ -1,0 +1,29 @@
+@import "./fonts.scss";
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: lightgreen;
+    font-family: 'Teko', sans-serif;
+}
+
+#canvas_area {
+    background-color: white;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    width: 6rem;
+    height: 6rem;
+
+    a {
+        border: solid thin black;
+        text-align: center;
+        line-height: 2rem;
+    }
+}

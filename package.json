@@ -1,0 +1,19 @@
+{
+  "name": "eu.blome.racegame",
+  "version": "1.0.0",
+  "description": "Pen and Paper racing game",
+  "main": "game.js",
+  "scripts": {
+    "start": "parcel ./index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Moritz Blome",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "tsm": "^2.2.1"
+  }
+}
